@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 It's jess just practicing branches
 
 As a User, 
@@ -31,3 +32,5 @@ It needs to show the unavailability of the space.
 As a Host, 
 So that I can choose my guest, 
 I want the listing to remain available until I confirm the request.
+=======
+>>>>>>> a24d5402fe73c87b052d6286b1d4a1b5c7c60be0
