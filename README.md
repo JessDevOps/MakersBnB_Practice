@@ -1,1 +1,0 @@
-As a Host, To be able to rent my spaces, I need to be able to list multiple spaces.
