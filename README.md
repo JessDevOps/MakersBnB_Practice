@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-It's jess just practicing branches
 
 As a User, 
 So that I can use MakersBnB, 
