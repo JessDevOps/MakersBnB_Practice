@@ -18,7 +18,7 @@ class MakersBnB < Sinatra::Base
   get '/spaces' do
     "Michaels house"
   end
-
+  
   get '/spaces/new' do
     "list new space"
   end
