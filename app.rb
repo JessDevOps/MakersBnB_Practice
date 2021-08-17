@@ -27,6 +27,10 @@ class MakersBnB < Sinatra::Base
     erb :view_available_space
   end
 
+  post '/spaces/1' do
+    'This date is available!'
+  end
+
   get '/requests' do
     "recieved requests"
   end
