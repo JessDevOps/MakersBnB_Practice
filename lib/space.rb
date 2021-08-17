@@ -31,4 +31,3 @@ require 'pg'
   end 
 
 end
-
