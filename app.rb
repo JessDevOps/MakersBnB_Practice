@@ -24,7 +24,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces/1' do
-    "select dates"
+    erb :view_available_space
   end
 
   get '/requests' do
