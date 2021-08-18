@@ -23,7 +23,6 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
-    p ENV
     @space = Space.all
     erb :spaces
   end
