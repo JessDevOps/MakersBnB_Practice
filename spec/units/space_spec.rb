@@ -17,3 +17,15 @@ describe '.all' do
 
   end 
 end
+
+describe '.create' do
+  it 'creates a new space' do
+    Space.create(name: 'Michaels House', description: 'Nice house', price_per_night: '10', date_available_from: '18/08/21', date_available_to: '19/08/21')
+
+    expect(Space.all).to include 'Michaels House'
+    expect(Space.all).to include 'Nice house'
+    expect(Space.all).to include '10'
+    expect(Space.all).to include '18/08/21'
+    expect(Space.all).to include '19/08/21'
+  end
+end

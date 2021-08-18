@@ -32,6 +32,11 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
+    Space.create(name: params[:name], 
+    description: params[:description], 
+    price_per_night: params[:price_per_night], 
+    date_available_from: params[:date_available_from], 
+    date_available_to: params[:date_available_to])
     redirect '/spaces'
   end
 
