@@ -22,9 +22,9 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
-    "Michaels House"
+    "Michaels house"
   end
- 
+
   get '/spaces/new' do
     erb :new_space
   end
