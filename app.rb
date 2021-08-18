@@ -24,7 +24,7 @@ class MakersBnB < Sinatra::Base
   get '/spaces' do
     "list of spaces"
   end
-
+ 
   get '/spaces/new' do
     "list new space"
   end
@@ -36,7 +36,6 @@ class MakersBnB < Sinatra::Base
 
   get '/requests' do
     "recieved requests"
-    "Sent requests"
   end
 
   run! if app_file == $0
