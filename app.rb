@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require_relative 'lib/space.rb'
+require './lib/space.rb'
 
 class MakersBnB < Sinatra::Base
 
@@ -23,7 +23,9 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
-    "Michaels house"
+    p ENV
+    @space = Space.all
+    erb :spaces
   end
 
   get '/spaces/new' do
