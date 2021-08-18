@@ -31,11 +31,11 @@
   <h2> feel at home anywhere</h2>
   <div class=container id=homepage_form>
     <form action="/newaccount" method=post
-      oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
+      oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'>
       <div class="mb-3 needs-validation" novalidate>
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>
+          <input type="text" name="first_name" class="form-control" id="validationCustom01" placeholder="First name" required>
           <div class="valid-feedback">
             Looks good!
           </div>
@@ -43,7 +43,7 @@
 
         <div class="col-md-4">
           <label for="validationCustom02" class="form-label">Last name</label>
-          <input type="text" class="form-control" id="validationCustom02" placeholder="Surname" required>
+          <input type="text" name="last_name"class="form-control" id="validationCustom02" placeholder="Surname" required>
           <div class="valid-feedback">
             Looks good!
           </div>
@@ -51,16 +51,16 @@
 
 
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" required name=up>
+          <input type="password" class="form-control" id="exampleInputPassword1" required name=password>
         </div>
 
         <div class="mb-3">
           <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword2" name=up2>
+          <input type="password" class="form-control" id="exampleInputPassword2" name=password2>
         </div>
 
 
