@@ -16,11 +16,15 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
-    "list of spaces"
+    "Michaels House"
   end
 
   get '/spaces/new' do
-    "list new space"
+    erb :new_space
+  end
+
+  post '/spaces' do
+    redirect '/spaces'
   end
 
   get '/spaces/1' do
