@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>MakersBnB</title>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">MakersBnB</a>
+      <li class="nav-item">
+        <a class="nav-link" href="/spaces">Spaces</a>
+        <%# add in an about page which will have description of "company" , what this project was about %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/requests">Requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sign Out</a>
+        <%# create a method/page to end session to be able to sign out %>
+      </li>
+
+    </div>
+  </nav>
+
+    <div>
+      <h3>Pick a night:</h3>
+      <form action= /spaces/1 method=post >
+        <label for="check_in">Choose check in date:</label>
+        <input type="date" class="form-control" id="check_in" placeholder="dd/mm/yyyy">
+
+        <label for="check_out">Choose check out date:</label>
+        <%# Put in date rnage and validation to prevent check out being ealier than check in date%>
+        <input type="date" class="form-control" id="check_out" placeholder="dd/mm/yyyy">
+
+        <div id="submit_request">
+          <button type="button" class="btn btn-secondary" id="submit_request">Submit Request</button>
+        </div>
+
+      </form>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+
+
+

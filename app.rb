@@ -22,21 +22,25 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
-    "list of spaces"
+    "Michaels House"
+  end
+ 
+  get '/spaces/new' do
+    erb :new_space
   end
 
-  get '/spaces/new' do
-    "list new space"
+  post '/spaces' do
+    redirect '/spaces'
   end
 
   get '/spaces/1' do
     "select dates"
+    erb :spaces_1
   end
 
   get '/requests' do
     "recieved requests"
   end
-
 
   run! if app_file == $0
 end
