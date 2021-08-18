@@ -10,21 +10,33 @@ class MakersBnB < Sinatra::Base
 
   get '/' do
     "Homepage"
+    erb :"homepage"
+  end
+
+  post '/newaccount' do
+    erb :"homepage"
   end
 
   get '/login' do
     "login"
+    erb :login
   end
 
   get '/spaces' do
-    "list of spaces"
+    "Michaels house"
   end
 
   get '/spaces/new' do
-    "list new space"
+    erb :new_space
+  end
+
+  post '/spaces' do
+    redirect '/spaces'
   end
 
   get '/spaces/1' do
+    "select dates"
+    erb :spaces_1
   end
 
   get '/requests' do
