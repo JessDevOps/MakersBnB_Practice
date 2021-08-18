@@ -1,0 +1,1 @@
+CREATE TABLE guest_requests (id SERIAL PRIMARY KEY, first_name VARCHAR(60), last_name VARCHAR(60), check_in_date VARCHAR(60), check_out_date VARCHAR(60));

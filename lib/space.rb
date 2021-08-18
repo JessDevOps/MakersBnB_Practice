@@ -1,6 +1,6 @@
 require 'pg'
 
- Space
+ class Space
 
   def initialize
     @available = true 

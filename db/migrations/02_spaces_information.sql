@@ -1,0 +1,1 @@
+CREATE TABLE spaces_information (id SERIAL PRIMARY KEY, name VARCHAR(60), description VARCHAR(240), price_per_night VARCHAR(60), date_available_from VARCHAR(60), date_available_to VARCHAR(60));
