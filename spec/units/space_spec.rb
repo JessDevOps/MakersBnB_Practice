@@ -11,9 +11,9 @@ describe '.all' do
 
     space = Space.all
 
-    expect(space).to include "Michaels House"
-    expect(space).to include "Annesas House"
-    expect(space).to include "Odaines House"
+    expect(spaces_information).to include "Michaels House"
+    expect(spaces_information).to include "Annesas House"
+    expect(spaces_information).to include "Odaines House"
 
   end 
 end
