@@ -25,17 +25,11 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces/1' do
-    erb :view_available_space
-  end
-
-  post '/spaces/1' do
-    'This date is available!'
   end
 
   get '/requests' do
     "recieved requests"
   end
-
 
   run! if app_file == $0
 end
