@@ -5,6 +5,8 @@ require_relative 'lib/user.rb'
 
 class MakersBnB < Sinatra::Base
 
+  enable :sessions
+
   configure :development do
     register Sinatra::Reloader
   end
@@ -25,22 +27,24 @@ class MakersBnB < Sinatra::Base
   end
   
   post '/login_user' do
-    result = connection.exec(
-    "SELECT * FROM user_information WHERE email = $1",
-    [params[:email]]
-  )
-    user = User.new(result[0]['id'], result[0]['email'], result[0]['password'])
+    user = User.authenticate(email: params[:email], password: params[:password])
 
-  session[:user_id] = user.id
-  redirect('/spaces')
+    # result = connection.exec(
+    # "SELECT * FROM user_information WHERE email = '#{email}'",
+    # [params[:email]]
+    # )
+    # user = User.new(id: result[0]['id'], email: result[0]['email'], password: result[0]['password'])
+
+    session[:user_id] = user.id
+    redirect('/spaces')
   end
 
   get '/spaces' do
-    if session[:user_id] 
-      "Michaels house"
-    else
-      redirect ('/login')
-    end
+    #if session[:user_id] 
+      "Michaels House"
+    #else
+    #  redirect ('/login')
+    #end
   end
 
   get '/spaces/new' do
