@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
 require_relative 'lib/space.rb'
+require_relative 'lib/user.rb'
 
 class MakersBnB < Sinatra::Base
 
@@ -14,6 +15,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/newaccount' do
+    User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
     erb :"homepage"
   end
 
