@@ -16,16 +16,31 @@ class MakersBnB < Sinatra::Base
 
   post '/newaccount' do
     User.create(first_name: params[:first_name], last_name: params[:last_name], email: params[:email], password: params[:password])
-    erb :"homepage"
+    redirect ('/login')
   end
 
   get '/login' do
     "login"
     erb :login
   end
+  
+  post '/login_user' do
+    result = connection.exec(
+    "SELECT * FROM user_information WHERE email = $1",
+    [params[:email]]
+  )
+    user = User.new(result[0]['id'], result[0]['email'], result[0]['password'])
+
+  session[:user_id] = user.id
+  redirect('/spaces')
+  end
 
   get '/spaces' do
-    "Michaels house"
+    if session[:user_id] 
+      "Michaels house"
+    else
+      redirect ('/login')
+    end
   end
 
   get '/spaces/new' do
