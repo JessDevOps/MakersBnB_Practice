@@ -7,3 +7,4 @@ def setup_test_database
   connection.exec('TRUNCATE spaces_information;')
   p 'Completed setup ... '
 end
+
