@@ -9,7 +9,7 @@ feature 'Sending requests' do
     expect(page).to have_content '17/08/21'
     expect(page).not_to have_content 'Confirmed'
   end
-end
+end 
 
 feature 'Accepting/Denying requests' do
   scenario 'can accept the request' do
