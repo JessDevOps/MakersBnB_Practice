@@ -1,31 +1,38 @@
+require 'pg'
 require 'space'
 
-describe '.all' do
-  it 'returns a list of the spaces' do
-    connection = PG.connect(dbname: 'tojambnb_test')
+RSpec.describe Space do
+  describe 'class method #all' do
+    it 'returns all spaces' do
+      connection = PG.connect(dbname: 'tojambnb_test')
 
-    connection.exec("INSERT INTO spaces_information (name) VALUES ('Michaels House');")
-    connection.exec("INSERT INTO spaces_information (name) VALUES('Annesas House');")
-    connection.exec("INSERT INTO spaces_information (name) VALUES('Odaines House');")
+      # Add the test data
+      connection.exec("INSERT INTO spaces_information (name, description, price_per_night, date_available_from, date_available_to)
+        VALUES ('Michaels House', 'Nice house', '10', '2021-08-18', 2021-08-19);")
 
 
-    space = Space.all
+      space = Space.all
 
-    expect(spaces_information).to include "Michaels House"
-    expect(spaces_information).to include "Annesas House"
-    expect(spaces_information).to include "Odaines House"
+      expect(space.first).to be_an_instance_of(Space)
+      expect(space.first.name).to eq('Michaels House')
+      expect(space.first.description).to eq('Nice house')
+      expect(space.first.price_per_night).to eq '10'
+      expect(space.first.date_available_from).to eq '2021-08-18'
+      expect(spaces.first.date_available_to).to eq '2021-08-19'
+    end
+  end
 
-  end 
-end
+  describe '#create - using database to verify' do
+    it '- adds a bookmark to the database' do
+      space = Space.create(name: 'Michaels House', description: 'Nice house', price_per_night: '10', 
+      date_available_from: '2021-08-18', date_available_to: '2021-08-19')
 
-describe '.create' do
-  it 'creates a new space' do
-    Space.create(name: 'Michaels House', description: 'Nice house', price_per_night: '10', date_available_from: '18/08/21', date_available_to: '19/08/21')
-
-    expect(Space.all).to include 'Michaels House'
-    expect(Space.all).to include 'Nice house'
-    expect(Space.all).to include '10'
-    expect(Space.all).to include '18/08/21'
-    expect(Space.all).to include '19/08/21'
+      expect(space).to be_a Space
+      expect(space.name).to eq 'Michaels House'
+      expect(space.description).to eq 'Nice house'
+      expect(space.price_per_night).to eq '10'
+      expect(space.date_available_from).to eq '2021-08-18'
+      expect(space.date_available_to).to eq '2021-08-19'
+    end
   end
 end

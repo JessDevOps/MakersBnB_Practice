@@ -22,11 +22,13 @@ class MakersBnB < Sinatra::Base
     erb :login
   end
 
+  
+  
   get '/spaces' do
     @space = Space.all
     erb :spaces
   end
-
+  
   get '/spaces/new' do
     erb :new_space
   end

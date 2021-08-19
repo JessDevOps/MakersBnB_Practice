@@ -1,2 +1,8 @@
-<%= @space %> 
-
+<div>
+<% @space.each_with_index do |space, index| %>
+  <table>
+  <tr>
+  <td style=“text-align: center”>  Name: <%= @space  %> </td>
+  </tr>
+  <% end %>
+</div>
