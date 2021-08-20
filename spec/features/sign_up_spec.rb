@@ -10,15 +10,8 @@ feature 'Sign up' do
     click_button('Sign up')
   #  expect(page).to have_content "Thank you for signing up"
   end
-
-  scenario 'When signed up a user can login' do
-    visit('/login')
-    fill_in('Email', with: 'tojam@makers.com')
-    fill_in('Password', with: 'makers')
-    click_button('Login')
-    # something about sessions here?
-  end
 end
+# done I think 
 
 
 
