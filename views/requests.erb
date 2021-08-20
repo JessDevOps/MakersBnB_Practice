@@ -1,0 +1,9 @@
+<ul>
+  <% @request.each do |request| %>
+    <li>
+     <%= request.user_id %>
+     <%= request.space_id %>
+     <%= request.date %>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,21 @@
+<form action="/requests" method="post">
+  <label> user_id 
+    <input type="text" name="user_id" />
+  </label><br>
+
+  Which space would you like to book?: <select name="space" id="space">
+    <option value="" selected="selected">Select space from list</option>
+  </select>
+  <br>
+
+  
+  <label for="start">Pick your date</label>
+    <input type="date" id="start" name="date"
+       value="2021-08-20"
+       min="2021-08-18" max="2030-12-31">
+  </label><br>
+  
+  <input type="submit" value="Send Request" />
+</form>
+
+
