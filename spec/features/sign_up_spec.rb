@@ -2,24 +2,16 @@ feature 'Sign up' do
   scenario 'Users sign up with email, name, password' do
     # connection to db
     visit('/')
-    fill_in('First name', with: 'to')
-    fill_in('Last name', with: 'jam')
-    fill_in('Email', with: 'tojam@makers.com')
-    fill_in('Password' with: 'makers')
-    fill_in'Confirm password', with: 'makers')
-    check 'Agree to terms and conditions'
+    fill_in('first_name', with: 'Testing')
+    fill_in('last_name' with: '123')
+    fill_in('email' with: 'Testing@gmail.com')
+    fill_in('password' with: '12345')
+    fill_in('confirm_password' with: '12345')
     click_button('Sign up')
     expect(page).to have_content "Thank you for signing up"
   end
-
-  scenario 'When signed up a user can login' do
-    visit('/login')
-    fill_in('Email', with: 'tojam@makers.com')
-    fill_in('Password' with: 'makers')
-    click_button('Login')
-    # something about sessions here?
-  end
 end
+# done I think 
 
 
 

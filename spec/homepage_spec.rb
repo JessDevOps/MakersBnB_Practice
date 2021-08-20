@@ -1,4 +1,4 @@
-#require somethings 
+
 
 class Homepage
   describe 'Homepage' do
@@ -8,10 +8,6 @@ class Homepage
     expect(page).to have_field('email')
     expect(page).to have_field('password')
     expect(page).to have_field('confirm password')
-    #expect(page).to have_button('about')
-    #expand these tests as project develops
+    expect(page).to have_button('login')
   end
-
-  it ''
 end
-# to do 
