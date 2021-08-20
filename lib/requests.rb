@@ -27,11 +27,11 @@ class Request
     end
   end 
     
-    def initialize(user_id:, space_id:, date:, approved:)
-      @user_id = user_id
-      @space_id = space_id
-      @date = date
-      @approved = approved
-    end
+  def initialize(user_id:, space_id:, date:, approved:)
+    @user_id = user_id
+    @space_id = space_id
+    @date = date
+    @approved = approved
+  end
   
 end

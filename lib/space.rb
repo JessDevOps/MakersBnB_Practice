@@ -26,13 +26,13 @@ class Space
     end
   end 
     
-    def initialize(name:, description:, price_per_night:, date_available_from:, date_available_to:)
-      @name = name
-      @description = description
-      @price_per_night = price_per_night
-      @date_available_from = date_available_from
-      @date_available_to = date_available_to
-    end
+  def initialize(name:, description:, price_per_night:, date_available_from:, date_available_to:)
+    @name = name
+    @description = description
+    @price_per_night = price_per_night
+    @date_available_from = date_available_from
+    @date_available_to = date_available_to
+  end
   
 end
 

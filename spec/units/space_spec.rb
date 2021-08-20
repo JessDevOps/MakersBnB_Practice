@@ -13,11 +13,11 @@ RSpec.describe Space do
 
       space = Space.all
 
-      expect(space.).to be_an_instance_of(Space)
+      expect(space).to be_an_instance_of(Space)
       expect(space..name).to eq('Michaels House')
       expect(space.description).to eq('Nice house')
       expect(space.price_per_night).to eq '10'
-      expect(space.date_available_from).to eq '2021-08-18'
+      expect(spaces.date_available_from).to eq '2021-08-18'
       expect(spaces.date_available_to).to eq '2021-08-19'
     end
   end

@@ -60,11 +60,13 @@ class MakersBnB < Sinatra::Base
 
   get '/requests' do
     @request = Request.all_list
+    # p @request
     erb :requests
   end
 
   get '/requests/new' do
     erb :new_request
+    redirect('/requests')
   end
 
  
