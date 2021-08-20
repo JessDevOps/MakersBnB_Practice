@@ -21,7 +21,7 @@ class MakersBnB < Sinatra::Base
 
   get '/login' do
     "login"
-    erb :login
+    redirects '/spaces'
   end
 
   get '/spaces' do
@@ -33,7 +33,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
-    redirect '/spaces'
+    redirect '/view_available_space'
   end
 
   get '/spaces/1' do
