@@ -13,4 +13,14 @@ describe User do
       expect(user['first_name']).to eq 'James'
     end
   end
+
+  describe '#full_name' do
+   it "will show user's full name" do
+    connection = PG.connect(:dbname => 'tojambnb_test')
+
+    user =  User.create(first_name: 'Annesa', last_name: 'Mariyam', email: 'annesa@aol.com', password: 'hello')
+    expect(user.full_name).to eq 'Annesa Mariyam'
+   end 
+  end 
+
 end

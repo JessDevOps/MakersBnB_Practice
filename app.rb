@@ -1,8 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require_relative 'lib/requests.rb'
 require_relative 'lib/space.rb'
 require_relative 'lib/user.rb'
-require_relative 'lib/requests.rb'
 
 class MakersBnB < Sinatra::Base
 
@@ -41,7 +41,6 @@ class MakersBnB < Sinatra::Base
   end
 
   
-  
   get '/spaces' do
     @space = Space.all
     p @space
@@ -59,27 +58,17 @@ class MakersBnB < Sinatra::Base
     redirect '/spaces'
   end
 
-  get '/spaces/1' do
-    "select dates"
-    erb :spaces_1
+  get '/requests' do
+    @request = Request.all_list
+    erb :requests
   end
-
 
   get '/requests/new' do
     erb :new_request
   end
 
-  get '/requests/confirm' do
-    @request = Request.all
-    erb :requests
-  end
+ 
 
-  post '/requests/' do
-  end 
-
-  get '/requests/' do
-    'Thank you for your request. You will receive confirmation of your booking after review.'
-  end 
 
   
   run! if app_file == $0
