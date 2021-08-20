@@ -65,6 +65,7 @@ class MakersBnB < Sinatra::Base
 
   get '/requests' do
     "recieved requests"
+    erb :requests
   end
 
   run! if app_file == $0

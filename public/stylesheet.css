@@ -3,17 +3,9 @@ html, body{
     height: 100%;
 }
 
-body {
-    background-image: url("homepage_backg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-   
-}
 /* center buttons */
-/* ask hot to connect stylesheet to sinatra erb. */
-/* ask guys about colour scheme */
-/* font */
+
+
 /* change tyabs on navbar */
 /* no pathway for ne spaces*/
 /* fix new space h3 add padding or whatever */
@@ -135,4 +127,26 @@ h2 {
     padding: 20px;
     border-style: solid;
 
+}
+
+
+.jumbotron{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-style: solid;
+    border-color: white;
+ 
+
+
+}
+
+.card{
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-color: whitesmoke;
 }
