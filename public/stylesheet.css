@@ -107,6 +107,12 @@ h2 {
     justify-content: center;
     padding-left: 44%;
 }
+.btnContainerNewSpace{
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    padding-left: 39%;
+}
 
 .new_space_form{
     border-radius: 5px;
@@ -117,7 +123,7 @@ h2 {
     color: whitesmoke;
     border-style: solid;
     border-radius: 10px;
-    width:40%;
+    width: 40%;
     height: auto;
     margin: auto;
     margin-top: 20px;
