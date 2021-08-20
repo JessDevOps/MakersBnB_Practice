@@ -30,17 +30,11 @@ nav {
 }
 
 h2 {
-    background: rgba(243, 159, 173, 0.7);
-    padding: 20px;
-    text-align: center;
+    background: none;
     margin-top: 20px;
     margin-bottom: 20px;
-    border-color: whitesmoke;
-    font-family: 'Zilla Slab', serif;
     font-weight: 600;
-    color: whitesmoke;
-    border-style: solid;
-    border-radius: 5px;
+    color: black;
 }
 
 .signup_form{
@@ -128,4 +122,11 @@ h2 {
     margin: auto;
     margin-top: 20px;
     padding: 15px;
+}
+
+.list-group-item{
+    margin: 10px;
+    padding: 20px;
+    border-style: solid;
+
 }
