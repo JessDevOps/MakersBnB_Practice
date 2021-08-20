@@ -6,15 +6,10 @@ feature "Adding a new space" do
     fill_in('name', with: 'Michaels House')
     fill_in('description', with: 'Nice house')
     fill_in('price_per_night', with: '10')
-    fill_in('available_from', with: '19/08/2021')
-    fill_in('available_to', with: '19/08/2022')
+    fill_in('available_from', with: '18/08/21')
+    fill_in('available_to', with: '19/08/21')
     click_button('Submit')
-    visit('/spaces')
-    expect(page).to have_content('Michaels House')
-    expect(page).to have_content('Nice house')
-    expect(page).to have_content('10')
-    expect(page).to have_content('19/08/2021')
-    expect(page).to have_content('19/08/2022')
+    expect(page).to have_content('Michaels House', 'Nice house', '10', '18/08/21', '19/08/21')
   end
 end
 # done I think
