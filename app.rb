@@ -23,7 +23,7 @@ class MakersBnB < Sinatra::Base
 
   get '/login' do
     "login"
-    erb :login
+    erb :"login"
   end
   
   post '/login_user' do
